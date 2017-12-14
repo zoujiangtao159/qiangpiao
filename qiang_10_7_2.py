@@ -132,16 +132,16 @@ if __name__ == '__main__':
     password = input('密码：')
     sign = deng_lu(name, password)
     i = 0
-    while time.time() < 1506491443:
+    while time.time() < 1507638807:
 
         print('开始抢票时间：2017/9/27 13:50:43')
         time.sleep(30)
-    while time.time() > 1506491443:
+    while time.time() > 1507638807:
 
-        while time.time() < 1506494452:
+        while time.time() < 1507642407:
             time.sleep(0.3)
-            maipiao_result = mai_piao(name=name, sellingPrice='260', activityId='59c9c1890cf277cc1aa25c38',
-                                      ticketId='082979e2d5064a7e91cf9b0ab502070e', limitBuyNum='2', sign=sign)
+            maipiao_result = mai_piao(name=name, sellingPrice='420', activityId='59daf90f0cf2152a37685149',
+                                      ticketId='d860630da4fe4f80a3ccf66b21056c42', limitBuyNum='1', sign=sign)
             i = i + 1
             # print(i)1
             if i % 10 == 0:
@@ -158,7 +158,7 @@ if __name__ == '__main__':
                 #print('买票成功，请使用客户端查看未付订单，查看结果~，确认后修改账户密码，修改密码后支付订单，保证安全')
                 break
         if maipiao_result['state'] == '1':
-            yuyin_tongzhi(name)
+            yuyin_tongzhi('15019515524')
             print('买票成功，请使用客户端查看未付订单，查看结果~，确认后修改账户密码，修改密码后支付订单，保证安全')
             break
 
